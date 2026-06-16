@@ -1,0 +1,47 @@
+name: anatoly
+description: "Anatoly — güçlü, programlanabilir antrenman takip uygulaması."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # Yerel depolama (JSON dosya tabanlı)
+  path_provider: ^2.1.5
+  path: ^1.9.0
+
+  # UI
+  fl_chart: ^0.69.2
+  cached_network_image: ^3.4.1
+  google_fonts: ^6.2.1
+
+  url_launcher: ^6.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/exercises.json
+    - assets/programs.json
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/icon.png"
+  remove_alpha_ios: true
+  background_color_ios: "#0D0E12"
+  adaptive_icon_background: "#0D0E12"
+  adaptive_icon_foreground: "assets/icon/icon_fg.png"
