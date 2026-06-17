@@ -45,6 +45,12 @@ header.site .wrap {
 header.site nav { margin-left: auto; display: flex; gap: 18px; font-size: 14px; }
 header.site nav a { color: var(--dim); }
 header.site nav a:hover { color: var(--text); text-decoration: none; }
+.langsel {
+  background: var(--surface-high); color: var(--text);
+  border: 1px solid var(--border); border-radius: 9px;
+  padding: 6px 8px; font-size: 13px; cursor: pointer; font-family: inherit;
+}
+.langsel:focus { outline: none; border-color: var(--accent); }
 
 /* Hero */
 .hero { padding: 70px 0 50px; text-align: center; }

@@ -7,94 +7,52 @@
   <meta name="description" content="Anatoly kullanım şartları ve sağlık sorumluluk reddi." />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body data-page="terms">
   <header class="site">
     <div class="wrap">
       <a class="brand" href="index.html" style="color:inherit"><span class="logo">A</span> Anatoly</a>
       <nav>
-        <a href="index.html">Ana Sayfa</a>
-        <a href="privacy.html">Gizlilik</a>
+        <a href="index.html" data-i18n="nav.home">Ana Sayfa</a>
+        <a href="privacy.html" data-i18n="nav.privacy">Gizlilik</a>
+        <select id="langSel" class="langsel" aria-label="Language"></select>
       </nav>
     </div>
   </header>
 
   <main class="wrap content">
-    <h1>Kullanım Şartları</h1>
-    <p class="updated">Son güncelleme: 17 Haziran 2026</p>
+    <h1 data-i18n="tt.h1">Kullanım Şartları</h1>
+    <p class="updated" data-i18n="tt.updated"></p>
+    <p data-i18n="tt.intro"></p>
+    <div class="callout" data-i18n-html="tt.health"></div>
 
-    <p>
-      Anatoly uygulamasını ("uygulama") kullanarak aşağıdaki şartları kabul etmiş olursun.
-      Kabul etmiyorsan lütfen uygulamayı kullanma.
-    </p>
-
-    <div class="callout">
-      <strong>Sağlık uyarısı:</strong> Anatoly bir tıbbi veya profesyonel antrenörlük
-      hizmeti değildir. Ağırlık antrenmanı yaralanma riski taşır. Yeni bir programa
-      başlamadan önce bir sağlık uzmanına danış. Tüm egzersizleri kendi sorumluluğunda yaparsın.
-    </div>
-
-    <h2>1. Hizmetin niteliği</h2>
-    <p>
-      Anatoly, antrenman programlarını planlamana ve kaydetmene yardımcı olan bir araçtır.
-      Sağladığı programlar, ağırlık önerileri ve progresyon hesaplamaları yalnızca bilgilendirme
-      amaçlıdır ve kişiselleştirilmiş tıbbi/sportif tavsiye yerine geçmez.
-    </p>
-
-    <h2>2. "Olduğu gibi" sunum</h2>
-    <p>
-      Uygulama "olduğu gibi" ve "mevcut haliyle", açık veya zımni hiçbir garanti olmaksızın
-      sunulur. Hesaplamaların doğruluğu, kesintisiz çalışma veya belirli bir amaca uygunluk
-      garanti edilmez.
-    </p>
-
-    <h2>3. Sorumluluğun sınırlandırılması</h2>
-    <p>
-      Uygulamanın kullanımından doğan yaralanma, veri kaybı veya başka herhangi bir doğrudan/dolaylı
-      zarardan, yürürlükteki yasaların izin verdiği azami ölçüde, sorumluluk kabul edilmez.
-    </p>
-
-    <h2>4. Veriler ve yedekleme</h2>
-    <p>
-      Tüm verilerin cihazında saklanır (bkz. <a href="privacy.html">Gizlilik Politikası</a>).
-      Verilerinin yedeklenmesinden sen sorumlusun; uygulamanın kaldırılması veya cihaz verilerinin
-      temizlenmesi geçmişini kalıcı olarak siler.
-    </p>
-
-    <h2>5. Lisans ve açık kaynak</h2>
-    <p>
-      Anatoly açık kaynaklıdır ve <strong>GNU AGPL v3</strong> lisansı altında dağıtılır.
-      Kaynak koduna <a href="https://github.com/minerd/anatoly" target="_blank" rel="noopener">github.com/minerd/anatoly</a>
-      adresinden ulaşabilirsin. Uygulama, <a href="https://github.com/astashov/liftosaur" target="_blank" rel="noopener">Liftosaur</a>
-      (© Anton Astashov, AGPL v3) projesinin egzersiz/program verilerini ve Liftoscript dil
-      tasarımını temel alan bir türev çalışmadır.
-    </p>
-
-    <h2>6. Üçüncü taraf içerikler</h2>
-    <p>
-      Egzersiz görselleri ve video bağlantıları üçüncü taraf hizmetlerden (Liftosaur, YouTube)
-      gelir ve ilgili hak sahiplerine aittir.
-    </p>
-
-    <h2>7. Değişiklikler</h2>
-    <p>
-      Bu şartlar zaman zaman güncellenebilir. Güncel sürüm her zaman bu sayfada yayınlanır.
-    </p>
-
-    <h2>8. İletişim</h2>
-    <p>
-      Sorular için: <a href="mailto:ongorunet@gmail.com">ongorunet@gmail.com</a>
-    </p>
+    <h2 data-i18n="tt.s1h"></h2>
+    <p data-i18n-html="tt.s1b"></p>
+    <h2 data-i18n="tt.s2h"></h2>
+    <p data-i18n-html="tt.s2b"></p>
+    <h2 data-i18n="tt.s3h"></h2>
+    <p data-i18n-html="tt.s3b"></p>
+    <h2 data-i18n="tt.s4h"></h2>
+    <p data-i18n-html="tt.s4b"></p>
+    <h2 data-i18n="tt.s5h"></h2>
+    <p data-i18n-html="tt.s5b"></p>
+    <h2 data-i18n="tt.s6h"></h2>
+    <p data-i18n-html="tt.s6b"></p>
+    <h2 data-i18n="tt.s7h"></h2>
+    <p data-i18n-html="tt.s7b"></p>
+    <h2 data-i18n="tt.s8h"></h2>
+    <p data-i18n-html="tt.s8b"></p>
   </main>
 
   <footer class="site">
     <div class="wrap">
-      <div>© 2026 Anatoly · AGPL v3</div>
+      <div data-i18n="foot.copy">© 2026 Anatoly · AGPL v3</div>
       <nav>
-        <a href="index.html">Ana Sayfa</a>
-        <a href="privacy.html">Gizlilik Politikası</a>
-        <a href="mailto:ongorunet@gmail.com">İletişim</a>
+        <a href="index.html" data-i18n="nav.home">Ana Sayfa</a>
+        <a href="privacy.html" data-i18n="foot.privacy">Gizlilik Politikası</a>
+        <a href="mailto:ongorunet@gmail.com" data-i18n="foot.contact">İletişim</a>
       </nav>
     </div>
   </footer>
+  <script src="i18n.js"></script>
 </body>
 </html>

@@ -7,115 +7,65 @@
   <meta name="description" content="Anatoly gizlilik politikası. Anatoly hiçbir kişisel veri toplamaz; tüm veriler cihazda saklanır." />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body data-page="privacy">
   <header class="site">
     <div class="wrap">
       <a class="brand" href="index.html" style="color:inherit"><span class="logo">A</span> Anatoly</a>
       <nav>
-        <a href="index.html">Ana Sayfa</a>
-        <a href="terms.html">Şartlar</a>
+        <a href="index.html" data-i18n="nav.home">Ana Sayfa</a>
+        <a href="terms.html" data-i18n="nav.terms">Şartlar</a>
+        <select id="langSel" class="langsel" aria-label="Language"></select>
       </nav>
     </div>
   </header>
 
   <main class="wrap content">
-    <h1>Gizlilik Politikası</h1>
-    <p class="updated">Son güncelleme: 17 Haziran 2026</p>
+    <h1 data-i18n="pp.h1">Gizlilik Politikası</h1>
+    <p class="updated" data-i18n="pp.updated"></p>
+    <div class="callout" data-i18n-html="pp.summary"></div>
 
-    <div class="callout">
-      <strong>Özet:</strong> Anatoly senden hiçbir kişisel veri toplamaz, hesap istemez,
-      seni takip etmez ve reklam göstermez. Tüm antrenman verilerin yalnızca cihazında saklanır.
-    </div>
+    <h2 data-i18n="pp.s1h"></h2>
+    <p data-i18n-html="pp.s1b"></p>
 
-    <h2>1. Kim olduğumuz</h2>
-    <p>
-      Anatoly ("uygulama"), programlanabilir bir antrenman takip uygulamasıdır. Bu gizlilik
-      politikası uygulamanın verileri nasıl ele aldığını açıklar. İletişim:
-      <a href="mailto:ongorunet@gmail.com">ongorunet@gmail.com</a>.
-    </p>
+    <h2 data-i18n="pp.s2h"></h2>
+    <p data-i18n-html="pp.s2b"></p>
+    <ul data-i18n-html="pp.s2l"></ul>
+    <p data-i18n-html="pp.s2n"></p>
 
-    <h2>2. Topladığımız veriler</h2>
-    <p>
-      <strong>Hiçbir kişisel veri toplamıyoruz.</strong> Anatoly'nin bir sunucusu, kullanıcı
-      hesabı veya bulut senkronizasyonu yoktur. Oluşturduğun tüm içerik şunlardır:
-    </p>
-    <ul>
-      <li>Antrenman programların, kayıtların ve setlerin,</li>
-      <li>Vücut ağırlığı ve ölçüm girişlerin,</li>
-      <li>Ayarların (birim, dil, ekipman, zamanlayıcılar).</li>
-    </ul>
-    <p>
-      Bu verilerin tamamı <strong>yalnızca senin cihazında</strong>, uygulamanın özel
-      depolama alanında bir dosyada tutulur. Bize veya üçüncü taraflara gönderilmez.
-    </p>
+    <h2 data-i18n="pp.s3h"></h2>
+    <p data-i18n-html="pp.s3b"></p>
 
-    <h2>3. Analitik, reklam ve takip</h2>
-    <p>
-      Anatoly <strong>analitik araç, reklam ağı veya takip teknolojisi kullanmaz.</strong>
-      Çerez kullanmaz, reklam kimliği (Advertising ID) okumaz.
-    </p>
+    <h2 data-i18n="pp.s4h"></h2>
+    <p data-i18n-html="pp.s4b"></p>
+    <ul data-i18n-html="pp.s4l"></ul>
+    <p data-i18n-html="pp.s4n"></p>
 
-    <h2>4. Ağ bağlantıları</h2>
-    <p>Uygulama yalnızca şu durumlarda internete bağlanır:</p>
-    <ul>
-      <li>
-        <strong>Egzersiz görselleri:</strong> Egzersiz gösterim görselleri Liftosaur'un
-        sunucusundan (<code>liftosaur.com</code>) yüklenir ve cihazında önbelleğe alınır.
-        Bu sırada, herhangi bir web isteğinde olduğu gibi cihazının IP adresi o sunucuya
-        iletilir. Görsel dışında kişisel veri gönderilmez.
-      </li>
-      <li>
-        <strong>Dış bağlantılar:</strong> Bir egzersiz videosunu izlemek istediğinde
-        (YouTube) veya web sitesi/GitHub/iletişim bağlantılarına dokunduğunda, ilgili
-        bağlantı cihazının tarayıcısında/uygulamasında açılır. Bu hizmetlerin kendi
-        gizlilik politikaları geçerlidir.
-      </li>
-    </ul>
-    <p>
-      Uygulamanın çekirdek işlevleri (antrenman kaydı, programlar, progresyon) internet
-      olmadan çevrimdışı çalışır.
-    </p>
+    <h2 data-i18n="pp.s5h"></h2>
+    <p data-i18n-html="pp.s5b"></p>
 
-    <h2>5. İzinler</h2>
-    <p>
-      Anatoly Android'de yalnızca <strong>İnternet</strong> iznini kullanır (egzersiz
-      görsellerini indirmek için). Konum, kişiler, kamera, mikrofon, dosya erişimi gibi
-      hassas izinler istenmez.
-    </p>
+    <h2 data-i18n="pp.s6h"></h2>
+    <p data-i18n-html="pp.s6b"></p>
 
-    <h2>6. Verilerini silme</h2>
-    <p>
-      Tüm verilerin cihazında olduğu için, uygulamayı kaldırdığında veya cihaz ayarlarından
-      uygulama verilerini temizlediğinde tüm antrenman geçmişin ve ayarların kalıcı olarak silinir.
-    </p>
+    <h2 data-i18n="pp.s7h"></h2>
+    <p data-i18n-html="pp.s7b"></p>
 
-    <h2>7. Çocukların gizliliği</h2>
-    <p>
-      Anatoly çocuklara yönelik değildir ve kimseden, çocuklar dahil, kişisel veri toplamaz.
-    </p>
+    <h2 data-i18n="pp.s8h"></h2>
+    <p data-i18n-html="pp.s8b"></p>
 
-    <h2>8. Değişiklikler</h2>
-    <p>
-      Bu politika güncellenebilir. Önemli değişikliklerde bu sayfadaki "Son güncelleme"
-      tarihi yenilenir.
-    </p>
-
-    <h2>9. İletişim</h2>
-    <p>
-      Gizlilikle ilgili sorularını <a href="mailto:ongorunet@gmail.com">ongorunet@gmail.com</a>
-      adresine iletebilirsin.
-    </p>
+    <h2 data-i18n="pp.s9h"></h2>
+    <p data-i18n-html="pp.s9b"></p>
   </main>
 
   <footer class="site">
     <div class="wrap">
-      <div>© 2026 Anatoly · AGPL v3</div>
+      <div data-i18n="foot.copy">© 2026 Anatoly · AGPL v3</div>
       <nav>
-        <a href="index.html">Ana Sayfa</a>
-        <a href="terms.html">Kullanım Şartları</a>
-        <a href="mailto:ongorunet@gmail.com">İletişim</a>
+        <a href="index.html" data-i18n="nav.home">Ana Sayfa</a>
+        <a href="terms.html" data-i18n="foot.terms">Kullanım Şartları</a>
+        <a href="mailto:ongorunet@gmail.com" data-i18n="foot.contact">İletişim</a>
       </nav>
     </div>
   </footer>
+  <script src="i18n.js"></script>
 </body>
 </html>
