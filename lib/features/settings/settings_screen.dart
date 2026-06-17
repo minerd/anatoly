@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../app_scope.dart';
 import '../../ui/i18n.dart';
 import '../../ui/theme.dart';
 import '../../ui/widgets.dart';
+import '../legal/legal_screen.dart';
+
+const String kContactEmail = 'ongorunet@gmail.com';
+const String kWebsite = 'https://alikaptanoglu.com/anatoly/';
+const String kSourceUrl = 'https://github.com/minerd/anatoly';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -111,10 +117,71 @@ class SettingsScreen extends StatelessWidget {
               ],
             ),
           ),
+          const SizedBox(height: 16),
+          SectionTitle(t.s('set.legal')),
+          AppCard(
+            padding: EdgeInsets.zero,
+            child: Column(
+              children: [
+                _linkTile(context, Icons.privacy_tip_outlined, t.s('set.privacy'),
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) =>
+                                LegalScreen(title: t.s('set.privacy'), kind: 'privacy')))),
+                const Divider(height: 1),
+                _linkTile(context, Icons.description_outlined, t.s('set.terms'),
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) =>
+                                LegalScreen(title: t.s('set.terms'), kind: 'terms')))),
+                const Divider(height: 1),
+                _linkTile(context, Icons.mail_outline, t.s('set.contact'),
+                    trailingText: kContactEmail,
+                    onTap: () => _launch('mailto:$kContactEmail'
+                        '?subject=${Uri.encodeComponent('Anatoly')}')),
+                const Divider(height: 1),
+                _linkTile(context, Icons.public, t.s('set.website'),
+                    external: true, onTap: () => _launch(kWebsite)),
+                const Divider(height: 1),
+                _linkTile(context, Icons.code, t.s('set.source'),
+                    external: true, onTap: () => _launch(kSourceUrl)),
+                const Divider(height: 1),
+                _linkTile(context, Icons.article_outlined, t.s('set.licenses'),
+                    onTap: () => showLicensePage(
+                          context: context,
+                          applicationName: 'Anatoly',
+                          applicationLegalese: '© 2026 Anatoly · AGPL v3',
+                        )),
+              ],
+            ),
+          ),
           const SizedBox(height: 24),
         ],
       ),
     );
+  }
+
+  Widget _linkTile(BuildContext context, IconData icon, String label,
+      {VoidCallback? onTap, String? trailingText, bool external = false}) {
+    return ListTile(
+      leading: Icon(icon, color: AppColors.textDim),
+      title: Text(label),
+      trailing: trailingText != null
+          ? Text(trailingText,
+              style: const TextStyle(color: AppColors.accent, fontSize: 13))
+          : Icon(external ? Icons.open_in_new : Icons.chevron_right,
+              size: external ? 18 : 24, color: AppColors.textDim),
+      onTap: onTap,
+    );
+  }
+
+  Future<void> _launch(String url) async {
+    final uri = Uri.tryParse(url);
+    if (uri != null) {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
+    }
   }
 
   void _pickLanguage(BuildContext context, dynamic app) {
