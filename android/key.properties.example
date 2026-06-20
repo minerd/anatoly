@@ -1,0 +1,14 @@
+# Release imzalama şablonu.
+# Bu dosyayı `key.properties` olarak KOPYALA ve değerleri kendi keystore'una göre doldur.
+# `key.properties` ve *.jks .gitignore'da — ASLA commit'leme, ASLA paylaşma.
+#
+# Keystore oluşturma (bir kez):
+#   keytool -genkey -v -keystore android/app/upload-keystore.jks \
+#     -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+#
+# storeFile yolu :app modülüne (android/app/) göre çözülür.
+
+storePassword=KEYSTORE_PAROLASI
+keyPassword=ANAHTAR_PAROLASI
+keyAlias=upload
+storeFile=upload-keystore.jks
